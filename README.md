@@ -28,7 +28,7 @@ Open [http://localhost:5173](http://localhost:5173).
 npm run build
 ```
 
-Output is in `dist/`. Preview with `npm run preview`.
+Output is in `build/`. Preview with `npm run preview`.
 
 ---
 
@@ -79,7 +79,7 @@ Launch deploys from your GitHub repo. After the repo exists:
 
 3. **Build and output settings**
    - **Build command:** `npm run build`
-   - **Output directory:** `dist`
+   - **Output directory:** `build` (Vite is configured to output to `build` for Launch compatibility)
    - **Framework preset:** **CSR** (Client-Side Rendered)
 
 4. **Environment variables (optional)**
@@ -93,6 +93,8 @@ Launch deploys from your GitHub repo. After the repo exists:
 
 - [Launch docs](https://www.contentstack.com/docs/developers/launch)
 - [Quick start – React](https://www.contentstack.com/docs/developers/launch/quick-start-react)
+
+**If you see "Incorrect output directory specified":** In the Launch project’s **Build and Output Settings**, set **Output directory** to exactly `build` (this repo’s Vite config outputs to `build` for Launch). Do not use `dist` or `./dist`.
 
 ---
 
